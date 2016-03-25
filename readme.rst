@@ -38,3 +38,25 @@ Then I just made a function public which is search_airport_get by the following 
 
 $config['auth_override_class_method']['api']['search_airport'] = 'none';
 
+##################
+Output Format & Case InSensitive Routes
+###################
+
+this rest.php and REST_Controlled have provided the faclitiy to set your own output format by just giving the format as a parameter.
+like 
+/api/search_airport/QUE125?format=xml
+
+and the provided formats are listed below
+
+$config['rest_supported_formats'] = [
+    'json',
+    'array',
+    'csv',
+    'html',
+    'jsonp',
+    'php',
+    'serialized',
+    'xml',
+];
+
+These two files auto provide case insensitive routes.
